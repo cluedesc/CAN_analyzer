@@ -1,0 +1,9 @@
+[submodule "external/libpqxx"]
+	path = external/libpqxx
+	url = https://github.com/jtv/libpqxx.git
+[submodule "external/imgui"]
+	path = external/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "external/nlohmann_json"]
+	path = external/nlohmann_json
+	url = https://github.com/nlohmann/json.git
