@@ -13,6 +13,11 @@ namespace app {
         update();
     }
 
+    void c_app::override_app_size(int width, int height) {
+        m_width = width;
+        m_height = height;
+    }
+
     void c_app::init() {
         if (!glfwInit())
             throw std::runtime_error("Error while initializing GLFW");
@@ -21,7 +26,7 @@ namespace app {
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-        m_window = glfwCreateWindow(1280, 720, "CAN Analyzer", nullptr, nullptr);
+        m_window = glfwCreateWindow(m_width, m_height, "CAN Analyzer", nullptr, nullptr);
 
         if (!m_window) {
             glfwTerminate();

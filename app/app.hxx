@@ -56,6 +56,8 @@ namespace app {
 
         bool is_db_connected() const;
 
+        void override_app_size(int width, int height);
+
        private:
         void init();
 
@@ -75,6 +77,10 @@ namespace app {
         c_database_handler m_db_handler{};
 
         c_renderer m_renderer{};
+
+        int m_width{1280};
+
+        int m_height{720};
     };
 } // namespace app
 

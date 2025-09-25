@@ -8,7 +8,9 @@
 
 #include <GLFW/glfw3.h>
 
-#include <tinyfiledialogs.h>
+extern "C" {
+#include "tinyfiledialogs.h"
+}
 
 #include <pqxx/pqxx>
 

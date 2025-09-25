@@ -60,8 +60,17 @@ namespace app {
             ImGui::Text("Total Bytes Received: %ld", model.m_total_bytes_received);
 
             if (!model.m_error_msg.empty()) {
+                ImGui::Spacing();
+                ImGui::Separator();
+
                 ImGui::TextColored(
                     ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "Error: %s", model.m_error_msg.c_str());
+            }
+            else {
+                ImGui::Spacing();
+                ImGui::Separator();
+
+                ImGui::Text("Error: No error");
             }
         }
 
